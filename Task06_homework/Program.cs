@@ -4,22 +4,16 @@
 (делится ли оно на два без остатка).
 */
 
-Console.WriteLine("Введите число: ");
+Console.Write("Введите число: ");
 
 int number = Convert.ToInt32(Console.ReadLine());
-if (number > 0)
+
+int divByTwo = number % 2;
+if (divByTwo == 0)
 {
-    int DivByTwo = number % 2;
-    if (DivByTwo == 0)
-    {
-        Console.Write($"{number} является четным числом");
-    }
-    else
-    {
-        Console.Write($"{number} не является четным числом");
-    }
+    Console.Write($"{number} является четным числом");
 }
 else
 {
-    Console.WriteLine("Введено не натуральное число!");
+    Console.Write($"{number} не является четным числом");
 }
